@@ -1,0 +1,105 @@
+<DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@700&display=swap" rel="stylesheet"> 
+<script src="https://kit.fontawesome.com/dce9bdfcef.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+    
+    <title>My first Landing-page</title>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+       <div class="logo"><a href="#">Design</a></div>
+       <!-- <button class="toggle">
+        <i class="fa fa-bars "></i>
+       </button> -->
+        <nav class="navegacao">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li>
+                   <a href="#dropdown">Dropdown <img src="img/icons8-seta-para-expandir-24.png" alt="seta indicando mais conteudo - adiquirido em https://icons8.com/icon/85327/seta-para-expandir"></a>
+                    <ul class="submenu">
+                        <li><a href="#1">Item 1</a></li>
+                        <li><a href="#2">Item 2</a></li>
+                        <li><a href="#3">Item 3</a></li>
+                    </ul>
+                
+                </li>
+                <li><a href="#inner-page">Inner Page</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+            
+        </nav>
+        <a class="head-button" href="#free-templates">Free Templates</a>
+    </header>
+<!-- <div class="conteiner">  -->
+<div class="left">
+
+    <main class="conteudo-principal">
+        <h1>Create, Code,<br> and Published.</h1>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separeted they live in bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+        <button class="botao-principal"><a href="#home">get started</a></button>
+    </main>
+    <div class="icone-conteiner">
+    <span>
+        <img class="icones" src="img/Freepik.png" alt="">
+        <h4>High Quality</h4>
+        <p>Far far away, behind the word mountains, far from the countries</p>
+        <div class="circle"></div>
+    </span>
+    <span >
+        <img class="icones" src="img/Surang.png" alt="">
+        <h4>High Quality</h4>
+        <p>Far far away, behind the word mountains, far from the countries</p>
+        <div class="circle"></div>
+    </span>
+    </div>
+</div><!--<div class="right">--><img class="monica" src="img/MonicaSansao.jpg" alt="">
+
+    
+    <article class="extra-info">
+        <p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the behind texts. Separeted they live in bookmarksgrove."</p>
+        <address>
+            <h4>daniella wood</h4><p>founder @Colorlib</p>
+        </address>
+    </article>
+    
+    
+    <div class="sticky"></div>
+    
+<!-- </div> -->
+
+<!-- </div> -->
+<script>
+    document.querySelectorAll('[folder]').forEach(folder => {
+        folder.onclick = function(e) {
+            const ul = folder.nextElementSibling
+            const mostrar = ul.style.display
+            ul.style.display = mostrar === 'none' ? 'block' : 'none'
+        }
+    })
+
+        window.onhashchange = function(e) {
+            const oldURL = e.oldURL.split('#')[1]
+            const newURL = e.newURL.split('#')[1]
+            // console.log(oldURL, newURL)
+            const oldMenu = document.querySelector(`.navegacao a[href='#${oldURL}']`)
+            const newMenu = document.querySelector(`.navegacao a[href='#${newURL}']`)
+            oldMenu && oldMenu.classList.remove('selected')
+            newMenu && newMenu.classList.add('selected')
+        }
+    
+</script>
+</body>
+</html>
