@@ -1,0 +1,103 @@
+<DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,700&display=swap" rel="stylesheet"> 
+    
+<script src="https://kit.fontawesome.com/dce9bdfcef.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+    
+    <title>My first Landing-page FLEXBOX</title>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+       <div class="logo"><a href="#">Design</a></div>
+        <nav class="navegacao">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li>
+                   <a href="#dropdown">Dropdown <i class="fa-sharp fa-solid fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#1">Item 1</a></li>
+                        <li><a href="#2">Item 2</a></li>
+                        <li><a href="#3">Item 3</a></li>
+                    </ul>
+                
+                </li>
+                <li><a href="#inner-page">Inner Page</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+            
+        </nav>
+        <a class="head-button" href="#free-templates">Free Templates</a>
+    </header>
+<main class="conteiner"> 
+<!-- <div class="left"> -->
+
+    <div class="conteudo-principal">
+    <div>
+        <h1>Create, Code,<br> and Published.</h1>
+        <p>Far far away, behind the word mountains, far from the<br> countries Vokalia and Consonantia, there live the blind<br> texts. Separeted they live in bookmarksgrove right at<br> the coast of the Semantics, a large language ocean.</p>
+        <div class="botao-principal"><button ><a href="#home">get started</a></button></div> </div>
+    
+    <div class="icone-conteiner">
+    <span>
+        <img class="icones" src="../img/Freepik.png" alt="">
+        <h4>High Quality</h4>
+        <p>Far far away, behind the<br> word mountains, far from the<br> countries</p>
+        <div class="circle"></div>
+    </span>
+    <span>
+        <img class="icones" src="../img/Surang.png" alt="">
+        <h4>High Quality</h4>
+        <p>Far far away, behind the<br> word mountains, far from the<br> countries</p>
+        <div class="circle"></div>
+    </span>
+    </div>
+    </div>
+<div class="right">
+    <picture class="monica" ><img src="../img/MonicaSansao.jpg" alt=""></picture>
+
+    
+    <article class="extra-info">
+        <p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the behind texts. Separeted they live in bookmarksgrove."</p>
+        <address>
+            <h4>daniella wood</h4><p>founder @Colorlib</p>
+        </address>
+    </article>
+    
+    
+    <div class="sticky"></div>
+    
+</div>
+
+</main>
+<script>
+    document.querySelectorAll('[folder]').forEach(folder => {
+        folder.onclick = function(e) {
+            const ul = folder.nextElementSibling
+            const mostrar = ul.style.display
+            ul.style.display = mostrar === 'none' ? 'block' : 'none'
+        }
+    })
+
+        window.onhashchange = function(e) {
+            const oldURL = e.oldURL.split('#')[1]
+            const newURL = e.newURL.split('#')[1]
+            // console.log(oldURL, newURL)
+            const oldMenu = document.querySelector(`.navegacao a[href='#${oldURL}']`)
+            const newMenu = document.querySelector(`.navegacao a[href='#${newURL}']`)
+            oldMenu && oldMenu.classList.remove('selecionado')
+            newMenu && newMenu.classList.add('selecionado')
+        }
+    
+</script>
+</body>
+</html>
